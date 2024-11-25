@@ -1,0 +1,66 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 10px;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.unlisted-container {
+	display: flex;
+	flex-direction: column;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	/* Styles for laptops */
+	.flex-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column-reverse;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+	/* Styles for tablets */
+	.container {
+		margin: 0;
+		padding: 0;
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 10px;
+	}
+
+	.header {
+		margin-bottom: 10px;
+	}
+
+	.unlisted-container {
+		grid-area: list;
+	}
+	.css-5wchs2-MuiDateCalendar-root {
+		grid-area: calender;
+	}
+	.css-1gtchvp-MuiPaper-root {
+		grid-area: history;
+	}
+	.flex-container {
+		/* display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column-reverse; */
+		display: grid;
+		grid-template-areas: "list" "history" "calender";
+	}
+	.field {
+		margin: 10px;
+	}
+}
